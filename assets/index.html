@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeJam Palette</title>
+  <script type="text/javascript" src="dist/bundle.js"></script>
+  <link rel='stylesheet' href='dist/style.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<link href="style.css" rel="stylesheet"></head>
+<body>
+  <header class="header">
+    <nav class="header__navigation">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu28AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAlSURBVHgB7dAxEQAACAOxL/JRjQQWjuvQSIiA5kARG5HsN37ZA0fEAagNw3FiAAAAAElFTkSuQmCC" alt="nav-bar">
+    </nav>
+    <h1 class="header__heading">Code-Jam - Image API</h1>
+    <div class="header__menu menu">
+      <img class="menu__image" src="./assets/img/github.png" alt="github">
+      <input class="menu__button" type="button" value="Login">
+    </div>
+  </header>
+  <section class="main">
+    <div class="main__tools tools">
+      <div class="tools__list list">
+        <div class="list__item">
+          <img src="./assets/img/bucket.svg" alt="Fill Bucket" id="bucket">
+          <span>Fill bucket</span>
+        </div>
+        <div class="list__item">
+          <img src="./assets/img/pick.svg" alt="Choose Color" id="pick">
+          <input class="list__item_pick" type="color" name="currentColor" id="curColor" value="#FFC107">
+          <span>Choose color</span>
+        </div>
+        <div class="list__item">
+          <img src="./assets/img/pencil.svg" alt="Pencil" id="pencil">
+          <span>Pencil</span>
+        </div>
+      </div>
+      <div class="tools__color color">
+        <div class="color__current">
+          <div id="current"></div>
+          <span>Current color</span>
+        </div>
+        <div class="color__prev">
+          <div id="previous"></div>
+          <span>Prev color</span>
+        </div>
+        <div class="color__red">
+          <div id="red"></div>
+          <span>red</span>
+        </div>
+        <div class="color__blue">
+          <div id="blue"></div>
+          <span>blue</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="main__canvas-form canvas-form">
+      <form class="canvas-form__input-data input-data">
+        <img class="input-data__img" src="./assets/img/Shape.svg" alt="search">
+        <input class="input-data__load" type="button" value="Load" id="load">
+        <input class="input-data__search" type="search" value="Minsk" id="search">
+        <input class="input-data__b-w" type="button" value="B&W" id="grayscale">
+      </form>
+      <canvas class="canvas-form__canvas" id="palette"></canvas>
+      <div class="input-range">
+        <div class="input-range__value">
+          <div id="value">128</div>
+          <img src="./assets/img/value.png" alt="value">
+        </div>
+        <input class="input-range__number" type="range" min="1" max="4" value="3">
+      </div>
+    </div>
+  </section>
+<script type="text/javascript" src="script.js"></script></body>
+</html>
